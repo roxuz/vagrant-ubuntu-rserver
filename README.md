@@ -17,7 +17,7 @@ Install `miniconda` if you don't have it already:
 
 Install the virtual environment `condaR.yaml` located in this repository:
 
-`wget https://github.com/esteinig/tutorials/condaR.yaml`
+`wget --no-check-certificate https://raw.githubusercontent.com/esteinig/tutorials/master/condaR.yaml`
 
 `conda env create --name condaR --file condaR.yaml`
 
