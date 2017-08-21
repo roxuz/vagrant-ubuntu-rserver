@@ -9,7 +9,7 @@ Activate `bash` shell on login:
 
 `bash`
 
-Install `miniconda` if you don't have it already:
+Install `miniconda` and let it append to PATH:
 
 `wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh`
 
@@ -19,7 +19,7 @@ Install the virtual environment `condaR.yaml` located in this repository:
 
 `wget --no-check-certificate https://raw.githubusercontent.com/esteinig/tutorials/master/condaR.yaml`
 
-`conda env create --name condaR --file condaR.yaml`
+`conda env create --file condaR.yaml`
 
 Activate the environment before running `R` and doing your usual thing with `install.packages`:
 
