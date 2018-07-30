@@ -2,30 +2,29 @@
 
 Hitchhiker's guide to a galaxy of painful installations - now in your system!
 
-Stuff the ancient gcc compiler and run R on Zodiac
----
+# Vagrant for running Ubuntu 16.04 with RStudio on Windows
 
-Activate `bash` shell on login:
+Install [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox version 5.1](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) for Windows (important as most recent release is not supported by Vagrant).
 
-`bash`
+For all following steps, use the GitHub shell (`MINGW64`) or similar on Windows.
 
-Install `miniconda` and let it append to PATH:
+```
+# Make a new directory for the VM
 
-`wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh`
+cd $HOME
 
-`bash Miniconda3-latest-Linux-x86_64.sh`
+mkdir vagrant/ubuntu-xenial
+cd vagrant/ubuntu-xenial
 
-Install the virtual environment `condaR.yaml` located in this repository:
+# Create the Vagrantfile
 
-`wget --no-check-certificate https://raw.githubusercontent.com/esteinig/tutorials/master/condaR.yaml`
+vagrant init ubuntu/xenial64
 
-`conda env create --file condaR.yaml`
+# Edit the generated Vagrantfile in your favourite editor:
 
-Activate the environment before running `R` and doing your usual thing with `install.packages`:
 
-`source activate condaR`
 
-You can deactivate the environment:
 
-`source deactivate`
 
+
+```
