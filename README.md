@@ -11,7 +11,10 @@ git clone https://github.com/esteinig/vagrant-ubuntu-rserver && cd vagrant-ubunt
 # boot and ssh into vm
 vagrant up && vagrant ssh
 
-# add a user for non-root access to R
+# manual config of vm
+bash /host/config.sh
+
+# add a user for non-root access to RStudio
 sudo useradd -m -p <password> <user>
 
 # disconnect
