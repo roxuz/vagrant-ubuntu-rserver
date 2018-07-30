@@ -18,7 +18,7 @@ sudo useradd -m -p <password> <user>
 exit
 ```
 
-Start R in your web-browser by navigating to `localhost:8787` (on the local network `192.0.0.1`) and enter your username and password.
+Start `RStudio` in your web-browser by navigating to `localhost:8787` (on the local network `192.0.0.1`) and enter your username and password.
 
 #### Vagrant box (ubuntu/xenial64)
 ---
