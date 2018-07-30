@@ -2,7 +2,7 @@
 
 Install [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox version 5.1](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) for Windows (important as most recent release is not supported by Vagrant).
 
-For all following steps, yo ucan use the [GitHub Desktop](https://desktop.github.com/) shell (based on `MINGW64`) or similar ([Cmder](http://cmder.net/)) on Windows.
+For all following steps, you could use the [GitHub Desktop](https://desktop.github.com/) shell or similar ([Cmder](http://cmder.net/)) on Windows.
 
 ```bash
 # clone this repository and cd 
