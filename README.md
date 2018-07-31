@@ -14,14 +14,11 @@ vagrant up && vagrant ssh
 # manual config of vm
 bash /host/config.sh
 
-# add a user for non-root access to RStudio
-sudo useradd -m -p <password> <user>
-
 # disconnect
 exit
 ```
 
-Start `RStudio` in your web-browser by navigating to `localhost:8787` (on the local network `192.0.0.1`) and enter your username and password.
+Start `RStudio` in your web-browser by navigating to `localhost:8787` (on the local network `192.0.0.1`). Enter username: `vagrant` and password: `vagrant`.
 
 #### Vagrant box (ubuntu/xenial64)
 ---
