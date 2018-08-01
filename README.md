@@ -12,7 +12,16 @@ git clone https://github.com/esteinig/vagrant-ubuntu-rserver && cd vagrant-ubunt
 vagrant up && vagrant ssh
 
 # manual config of vm
-bash /host/config.sh
+sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+
+sudo apt-get -y update
+sudo apt-get install -y r-base r-base-dev
+sudo apt-get install -y gdebi-core
+
+wget https://download2.rstudio.org/rstudio-server-1.1.456-amd64.deb
+sudo gdebi -n rstudio-server-1.1.456-amd64.deb
 
 # disconnect
 exit
@@ -23,5 +32,5 @@ Start `RStudio` in your web-browser by navigating to `localhost:8787`. Enter use
 #### Vagrant box (ubuntu/xenial64)
 ---
 
-Once the VM is booted you can enter it with `vagrant ssh`, leave with `exit` and shut it down with `vagrant halt`. Pleae not that this box is provisioned with 4096 MB RAM and 2 processors, so memory- or processor-intensive code in R is not really supported. You can change these provisions in the `Vagrantfile`, when the box is shut down. To restart after changing the Vagrantfile, you can use `vagrant up --no-provisions`. You can see the forwarding port (`8787` on host and guest) with `vagrant port`. Files can be transferred into the VM in the same directory in which the `Vagrantfile` is located (on Windows) and in the `/host` directory of the VM. 
+Once the VM is booted you can enter it with `vagrant ssh`, leave with `exit` and shut it down with `vagrant halt`. Please note that this box is provisioned with 4096 MB RAM and 2 processors, so memory- or processor-intensive code in R is not really supported. You can change these provisions in the `Vagrantfile`, when the box is shut down. To restart after changing the Vagrantfile, you can use `vagrant up --no-provisions`. You can see the forwarding port (`8787` on host and guest) with `vagrant port`. Files can be transferred into the VM in the same directory in which the `Vagrantfile` is located (on Windows) and in the `/host` directory of the VM. 
 
