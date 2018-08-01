@@ -6,7 +6,7 @@ For all following steps, you could use the [GitHub Desktop](https://desktop.gith
 
 ```bash
 # clone this repository and cd 
-git clone https://github.com/esteinig/vagrant-ubuntu-rserver && cd vagrant-ubuntu-server
+git clone https://github.com/esteinig/vagrant-ubuntu-rserver && cd vagrant-ubuntu-rserver
 
 # boot and ssh into vm
 vagrant up && vagrant ssh
