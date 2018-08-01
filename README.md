@@ -18,7 +18,7 @@ bash /host/config.sh
 exit
 ```
 
-Start `RStudio` in your web-browser by navigating to `localhost:8787` (on the local network `192.0.0.1`). Enter username: `vagrant` and password: `vagrant`.
+Start `RStudio` in your web-browser by navigating to `localhost:8787`. Enter username: `vagrant` and password: `vagrant`.
 
 #### Vagrant box (ubuntu/xenial64)
 ---
